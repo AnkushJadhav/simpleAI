@@ -2,8 +2,8 @@ import csv
 import numpy as np
 
 class CSVParser:
-	'Class for reading csv file and fetching parameters and labels'
-	params = []
+	'Class for reading csv file and fetching features and labels'
+	features = []
 	labels = []
 	csvFile = ''
 
@@ -17,11 +17,11 @@ class CSVParser:
 			for row in csvstream:
 				values.append(row)
 		nparrValues = np.array(values)
-		self.params = nparrValues[:,0]
+		self.features = nparrValues[:,0]
 		self.labels = nparrValues[:,1]
 		
-	def getParams(self):
-		return self.params
+	def getFeatures(self):
+		return self.features
 
 	def getLabels(self):
 		return self.labels				

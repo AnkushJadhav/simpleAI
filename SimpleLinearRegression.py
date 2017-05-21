@@ -9,9 +9,9 @@ class SimpleLinearRegression:
 	def getData(self, csvFile):
 		dataStream = CSVParser(csvFile)
 		dataStream.readFile()
-		params = dataStream.getParams()
+		features = dataStream.getFeatures()
 		labels = dataStream.getLabels()
-		return (params, labels)
+		return (features, labels)
 
 	def trainModel(self, params, labels):
 		sumX = 0
