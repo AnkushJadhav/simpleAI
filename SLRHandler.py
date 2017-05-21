@@ -1,7 +1,7 @@
 import sys
 from SimpleLinearRegression import SimpleLinearRegression
-csvFile = sys.argv[1]
-predictFeature = sys.argv[2]
+csvFile = 'test.csv'
+predictFeature = sys.argv[1]
 linReg = SimpleLinearRegression()
 features, labels = linReg.getData(csvFile)
 B0, B1 = linReg.trainModel(features, labels)
